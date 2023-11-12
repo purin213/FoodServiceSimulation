@@ -2,9 +2,11 @@
 namespace FoodItems;
 
 class Fettuchine extends FoodItem {
-    parent::__construct (
-        "fettuchine",
-        "cheesy and flat",
-        12.00
-    );
+    public function __construct(){
+        parent::__construct (
+            "fettuchine",
+            "cheesy and flat",
+            12.00
+        );
+    }
 }

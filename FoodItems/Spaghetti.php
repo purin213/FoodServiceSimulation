@@ -2,9 +2,11 @@
 namespace FoodItems;
 
 class Spaghetti extends FoodItem {
-    parent::__construct (
-        "spaghetti",
-        "not so flat",
-        9.40
-    );
+    public function __construct(){
+        parent::__construct (
+            "spaghetti",
+            "not so flat",
+            9.40
+        );
+    }
 }

@@ -8,7 +8,7 @@ abstract class FoodItem {
 
     public function __construct(string $name, string $description, float $price) {
         $this->name = $name;
-        $this->description = $description$;
+        $this->description = $description;
         $this->price = $price;
     }
 }
