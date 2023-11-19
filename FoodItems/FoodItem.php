@@ -1,7 +1,11 @@
 <?php
 namespace FoodItems;
 
+use Traits\GetterTrait\getVariable;
+
 abstract class FoodItem {
+    use getVariable;
+
     protected string $name;
     protected string $description;
     protected float $price;

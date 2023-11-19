@@ -3,7 +3,7 @@ namespace Traits\GetterTrait;
 
 use BadFunctionCallException;
 
-trait GetterTrait {
+trait getMethod{
     public function getClassVariable(callable $variableName): mixed{
         try{
             if (!isset($this->$variableName)) {
@@ -12,7 +12,7 @@ trait GetterTrait {
             return $this->$variableName;
         }
         catch(BadFunctionCallException $e){
-            echo "Bad function call exception called: {$e}", PHP_EOL;
+            echo "Bad function call exception called: {$e}". PHP_EOL;
         }
     }
 }

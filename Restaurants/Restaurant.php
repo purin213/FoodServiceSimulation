@@ -5,6 +5,7 @@ use FoodItems\CheeseBurger;
 use FoodItems\Fettuchine;
 use FoodItems\Pizza;
 use FoodItems\Spaghetti;
+use Traits\GetterTrait;
 
 class Restaurant {
     protected array $menu;

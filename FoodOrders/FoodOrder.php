@@ -3,8 +3,11 @@ namespace FoodOrders;
 
 use DateTimeZone;
 use DateTime;
+use Traits\GetterTrait\getMethod;
 
 abstract class FoodOrder {
+    use getMethod;
+
     protected array $items;
     protected string $orderTime;
 
