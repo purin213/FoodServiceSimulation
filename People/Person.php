@@ -3,8 +3,11 @@ namespace People;
 
 require_once 'vendor/autoload.php';
 use Faker\Factory;
+use Traits\GetterTrait\getMethod;
 
 abstract class Person {
+    use getMethod;
+
     protected string $name;
     protected int $age;
     protected string $address;

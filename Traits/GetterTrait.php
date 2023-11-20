@@ -4,7 +4,7 @@ namespace Traits\GetterTrait;
 use BadFunctionCallException;
 
 trait getMethod{
-    public function getClassVariable(callable $variableName): mixed{
+    public function getClassVariable(string $variableName): mixed{
         try{
             if (!isset($this->$variableName)) {
                 throw new BadFunctionCallException("Class variable {$variableName} does not exist.");
@@ -12,7 +12,7 @@ trait getMethod{
             return $this->$variableName;
         }
         catch(BadFunctionCallException $e){
-            echo "Bad function call exception called: {$e}". PHP_EOL;
+            exit("Bad function call exception called: {$e}". PHP_EOL);
         }
     }
 }

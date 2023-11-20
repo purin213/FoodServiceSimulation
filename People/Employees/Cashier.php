@@ -1,23 +1,23 @@
 <?php
 namespace Person\Employees;
 
-use Restaurants\Restaurant;
 use FoodOrders\FoodOrder;
 use Invoices\Invoice;
 use People\Employees\Employee;
-use Traits\GetterTrait\getMethod;
+use People\Employees\Chef;
 
 class Cashier extends Employee{
-    use getMethod;
-
-    public function __construct(int $employeeId, float $salary){
+    public function __construct($employeeId, $salary){
         parent::__construct(
             $this->employeeId = $employeeId,
             $this->salary = $salary
         );
     }
-    public function generateOrder(array $foodItem, Restaurant $restaurant): FoodOrder{
-        return new FoodOrder($restaurant[$foodItem]);
+    //Needs chef to generate
+    public function generateOrder(array $foodItem, Chef $chef): FoodOrder{
+        $foodOrder = new FoodOrder($foodItem);
+        echo $chef->prepareFood($foodOrder);
+        return $foodOrder;
     }
     public function generateInvoice(FoodOrder $foodOrder): Invoice{
         $finalPrice = array_reduce($foodOrder->getClassVariable('items'), function ($carry, $item) {

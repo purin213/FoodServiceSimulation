@@ -3,8 +3,10 @@ namespace Invoices;
 
 use DateTimeZone;
 use DateTime;
+use Traits\GetterTrait\getMethod;
 
 class Invoice {
+    use getMethod;
     protected float $finalPrice;
     protected string $orderTime;
     protected int $estimatedTimeInMinutes;

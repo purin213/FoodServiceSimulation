@@ -1,10 +1,10 @@
 <?php
 namespace FoodItems;
 
-use Traits\GetterTrait\getVariable;
+use Traits\GetterTrait\getMethod;
 
 abstract class FoodItem {
-    use getVariable;
+    use getMethod;
 
     protected string $name;
     protected string $description;

@@ -5,11 +5,17 @@ use FoodItems\CheeseBurger;
 use FoodItems\Fettuchine;
 use FoodItems\Pizza;
 use FoodItems\Spaghetti;
-use Traits\GetterTrait;
+# use Invoices\Invoice;
+use Traits\GetterTrait\getMethod;
 
 class Restaurant {
+    use getMethod;
+
     protected array $menu;
-    public function __construct() {
+    protected array $employees;
+    public function __construct($employees) {
         $this->menu = [new CheeseBurger(), new Fettuchine(), new Pizza(), new Spaghetti()];
+        $this->employees = $employees;
     }
+    # public function order(array $categories): Invoice{}
 }

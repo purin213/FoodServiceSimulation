@@ -10,10 +10,9 @@ class Customer extends Person {
         parent::__construct();
     }
 
-    //UNTESTED
-    public function interestedCategories(Restaurant $restaurant):array{
-        $menu = $restaurant.getMenu();
-        $randMenu = array_rand($menu, floor(count($menu)/4));
+    public function interestedCategories(Restaurant $restaurant): array{
+        $menu = $restaurant->getClassVariable('menu');
+        $randMenu = array_rand($menu, floor(count($menu)/2));
         $output = [];
         foreach ($randMenu as $food) {
             array_push($output, $menu[$food]);
@@ -21,7 +20,7 @@ class Customer extends Person {
         return $output;
     }
 
-    public function order(Restaurant $restaurant, array $categories):Invoice{
-        return $restaurant->order($categories);
+    public function order(Restaurant $restaurant):Invoice{
+        return $restaurant->order(interestedCategories($restaurant));
     }
 }

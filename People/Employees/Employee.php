@@ -1,5 +1,6 @@
 <?php
 namespace People\Employees;
+
 use People\Person;
 
 class Employee extends Person{
