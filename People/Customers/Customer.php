@@ -21,6 +21,6 @@ class Customer extends Person {
     }
 
     public function order(Restaurant $restaurant):Invoice{
-        return $restaurant->order(interestedCategories($restaurant));
+        return $restaurant->order($this->interestedCategories($restaurant));
     }
 }
