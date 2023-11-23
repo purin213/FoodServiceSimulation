@@ -5,7 +5,7 @@ use DateTimeZone;
 use DateTime;
 use Traits\GetterTrait\getMethod;
 
-abstract class FoodOrder {
+class FoodOrder {
     use getMethod;
 
     protected array $items;
