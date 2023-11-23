@@ -1,7 +1,7 @@
 <?php
 namespace FoodItems;
 
-use Traits\GetterTrait\getMethod;
+use Traits\getMethod;
 
 abstract class FoodItem {
     use getMethod;

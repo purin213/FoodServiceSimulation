@@ -4,8 +4,10 @@ namespace People\Customers;
 use Restaurants\Restaurant;
 use Invoices\Invoice;
 use People\Person;
+use Traits\getMethod;
 
 class Customer extends Person {
+    use getMethod;
     public function __construct(){
         parent::__construct();
     }

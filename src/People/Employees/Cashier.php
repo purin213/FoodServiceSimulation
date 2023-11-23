@@ -1,12 +1,15 @@
 <?php
-namespace Person\Employees;
+namespace People\Employees;
 
 use FoodOrders\FoodOrder;
 use Invoices\Invoice;
 use People\Employees\Employee;
 use People\Employees\Chef;
+use Traits\getMethod;
 
 class Cashier extends Employee{
+    use getMethod;
+
     public function __construct($employeeId, $salary){
         parent::__construct(
             $this->employeeId = $employeeId,

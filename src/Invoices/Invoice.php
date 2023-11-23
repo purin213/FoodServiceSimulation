@@ -3,7 +3,7 @@ namespace Invoices;
 
 use DateTimeZone;
 use DateTime;
-use Traits\GetterTrait\getMethod;
+use Traits\getMethod;
 
 class Invoice {
     use getMethod;

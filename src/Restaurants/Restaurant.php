@@ -6,7 +6,7 @@ use FoodItems\Fettuchine;
 use FoodItems\Pizza;
 use FoodItems\Spaghetti;
 use Invoices\Invoice;
-use Traits\GetterTrait\getMethod;
+use Traits\getMethod;
 
 
 class Restaurant {

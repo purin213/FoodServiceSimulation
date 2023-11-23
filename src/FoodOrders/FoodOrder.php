@@ -3,7 +3,7 @@ namespace FoodOrders;
 
 use DateTimeZone;
 use DateTime;
-use Traits\GetterTrait\getMethod;
+use Traits\getMethod;
 
 class FoodOrder {
     use getMethod;
